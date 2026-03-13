@@ -226,90 +226,17 @@ section{padding:96px 10vw;}
 .msgc-l p{font-size:11px;color:#4A5C4B;line-height:1.7;margin:0;}
 
 /* ══ TIMELINE ══ */
-/* ══ TIMELINE ══ */
-.tlgrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
-
-.tlc {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  position: relative;
-  overflow: hidden;
-  transition: background .25s;
-}
-
-.tlc.hl {
-  border-color: rgba(255,255,255,.2);
-}
-
-.tlc:hover {
-  background: rgba(255,255,255,.07);
-}
-
-.tlci {
-  padding: 30px 24px 16px;
-}
-
-.bign {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 68px;
-  font-weight: 900;
-  color: rgba(255,255,255,.03);
-  line-height: 1;
-  pointer-events: none;
-}
-
-/* 타임라인 상단 기간/카테고리: 연노랑으로 변경 */
-.tper {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: #FFEDA8;
-  margin-bottom: 7px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-/* 타임라인 기본 제목: 화이트 */
-.tlc h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 9px;
-  line-height: 1.4;
-}
-
-/* 01번 카드 제목만 특별히 Extra Bold + 연노랑 적용 */
-.tlc:nth-child(1) h3 {
-  font-weight: 900; 
-  color: #FFEDA8;
-  font-size: 15px; /* 약간 더 크게 강조 */
-}
-
-.tldesc {
-  font-size: 12px;
-  line-height: 1.8;
-  color: rgba(255,255,255,0.38);
-}
-
-/* 하단 결과 화살표 부분: 연노랑으로 통일 */
-.tlres {
-  margin: 10px 0 0;
-  font-size: 11px;
-  font-weight: 700;
-  color: #FFEDA8;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.tlres::before {
-  content: '→';
-}
+.tlgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.tlc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;transition:background .25s;}
+.tlc.hl{border-color:rgba(255,255,255,.2);}
+.tlc:hover{background:rgba(255,255,255,.07);}
+.tlci{padding:30px 24px 16px;}
+.bign{position:absolute;top:8px;right:12px;font-size:68px;font-weight:900;color:rgba(255,255,255,.03);line-height:1;pointer-events:none;}
+.tper{font-size:10px;letter-spacing:2px;color:#C8B830;margin-bottom:7px;text-transform:uppercase;}
+.tlc h3{font-size:14px;font-weight:700;color:#FFFFFF;margin-bottom:9px;line-height:1.4;}
+.tldesc{font-size:12px;line-height:1.8;color:rgba(255,255,255,.38);}
+.tlres{margin:10px 0 0;font-size:11px;font-weight:700;color:#C8B830;display:flex;align-items:center;gap:5px;}
+.tlres::before{content:'→';}
 
 /* ══ PERSONA ══ */
 .pwrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px;}

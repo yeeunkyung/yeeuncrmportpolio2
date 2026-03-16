@@ -34,20 +34,83 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 .nav-links a:hover{color:#FBA311;}
 
 /* ══ HERO ══ */
-#hero{min-height:100vh;background:#010101;display:flex;flex-direction:row;align-items:stretch;padding:0;position:relative;overflow:hidden;}
-#hero::before{display:none;}
-.h-arc{display:none;}
-.a1{display:none;}
-.a2{display:none;}
-/* 텍스트 영역: 왼쪽 30%만 차지 → 이미지가 더 오른쪽으로 */
-.hc{position:relative;z-index:2;flex:none;width:30%;min-width:380px;display:flex;flex-direction:column;justify-content:center;padding:120px 2vw 80px 8vw;}
-/* 이미지 영역: 나머지 65% */
-.hero-watch-wrap{position:relative;flex:1;align-self:stretch;overflow:hidden;min-height:100vh;}
-.hero-watch{display:none;width:100%;height:100%;object-fit:cover;object-position:center center;position:absolute;inset:0;animation:fadeIn .4s ease;}
-.hero-watch.active{display:block;}
-.hbadge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:6px 18px 6px 8px;margin-bottom:32px;}
-.hbadge .dot{width:7px;height:7px;background:#FBA311;border-radius:50%;}
-.hbadge span{font-size:10px;font-weight:700;letter-spacing:3px;color:#FFFFFF;text-transform:uppercase;}
+/* ══ HERO SECTION ══ */
+#hero {
+    min-height: 100vh;
+    background: #010101;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before { display: none; }
+.h-arc, .a1, .a2 { display: none; }
+
+/* 텍스트 영역: 40% */
+.hc {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 40%;
+    width: 40%;
+    min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 2vw 80px 8vw;
+}
+
+/* 이미지 영역: 60% */
+.hero-watch-wrap {
+    position: relative;
+    flex: 0 0 60%;
+    width: 60%;
+    align-self: stretch;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.hero-watch {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    inset: 0;
+    animation: fadeIn .4s ease;
+}
+
+.hero-watch.active { display: block; }
+
+/* 배지 스타일 */
+.hbadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.16);
+    padding: 6px 18px 6px 8px;
+    margin-bottom: 32px;
+}
+
+.hbadge .dot {
+    width: 7px;
+    height: 7px;
+    background: #FBA311;
+    border-radius: 50%;
+}
+
+.hbadge span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+  
 /* 원본 파일 기준 크기 복원 */
 .hname{font-size:clamp(56px,7vw,112px);font-weight:900;color:#FFFFFF;line-height:.92;letter-spacing:-2px;}
 .hname em{color:#FBA311;font-style:normal;display:block;font-weight:900;}

@@ -49,37 +49,36 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 #hero::before { display: none; }
 .h-arc, .a1, .a2 { display: none; }
 
-/* 텍스트 영역: 60% */
+/* 텍스트 영역: 한 줄로 길게 펴기 */
 .hc {
     position: relative;
     z-index: 2;
-    flex: 0 0 60%; /* 너비 60% 고정 */
-    width: 60%;
-    min-width: 380px;
+    flex: 0 0 50%;
+    width: 50%;
+    /* [수정] 텍스트가 줄바꿈되지 않도록 최소 너비 해제 및 너비 확보 */
+    min-width: none; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 120px 2vw 80px 8vw; /* 왼쪽 여백 유지 */
+    padding: 120px 0 80px 8vw; /* 오른쪽 패딩을 0으로 줄여 공간 확보 */
 }
 
-/* 이미지 영역: 40% */
+/* 이미지 영역: 50%를 유지하되 이미지를 오른쪽 끝으로 강제 밀착 */
 .hero-watch-wrap {
     position: relative;
-    flex: 0 0 40%; /* 너비 40% 고정 */
-    width: 40%;
+    flex: 0 0 50%;
+    width: 50%;
     align-self: stretch;
     overflow: hidden;
     min-height: 100vh;
-    display: flex;
-    justify-content: flex-end; /* [추가] 이미지를 오른쪽 끝으로 배치 */
 }
 
 .hero-watch {
     display: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* [수정] 이미지가 오른쪽으로 더 치우치도록 설정 */
+    object-fit: contain; /* [수정] 이미지가 잘리지 않고 전체가 다 보이도록 */
+    /* [수정] 이미지를 오른쪽 끝(right)에 강제 고정 */
     object-position: right center; 
     position: absolute;
     inset: 0;
@@ -88,7 +87,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 
 .hero-watch.active { display: block; }
 
-/* 배지 스타일 유지 */
+/* 하단 수치 영역 한 줄 정렬 보조 */
+.hc p, .hc h1, .hc h2 {
+    white-space: nowrap; /* [추가] 텍스트가 절대 아래로 떨어지지 않게 함 */
+}
+
+/* 배지 및 기타 스타일 유지 */
 .hbadge {
     display: inline-flex;
     align-items: center;
@@ -97,21 +101,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
     border: 1px solid rgba(255,255,255,.16);
     padding: 6px 18px 6px 8px;
     margin-bottom: 32px;
-}
-
-.hbadge .dot {
-    width: 7px;
-    height: 7px;
-    background: #FBA311;
-    border-radius: 50%;
-}
-
-.hbadge span {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #FFFFFF;
-    text-transform: uppercase;
 }
   
 /* 원본 파일 기준 크기 복원 */

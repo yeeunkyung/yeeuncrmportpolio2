@@ -49,27 +49,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 #hero::before { display: none; }
 .h-arc, .a1, .a2 { display: none; }
 
-/* 텍스트 영역: 40% */
+/* 텍스트 영역: 50% */
 .hc {
     position: relative;
     z-index: 2;
-    flex: 0 0 40%;
-    width: 40%;
+    flex: 0 0 50%; /* 너비 50% 고정 */
+    width: 50%;
     min-width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 120px 2vw 80px 8vw;
+    padding: 120px 2vw 80px 8vw; /* 왼쪽 여백 유지 */
 }
 
-/* 이미지 영역: 60% */
+/* 이미지 영역: 50% */
 .hero-watch-wrap {
     position: relative;
-    flex: 0 0 60%;
-    width: 60%;
+    flex: 0 0 50%; /* 너비 50% 고정 */
+    width: 50%;
     align-self: stretch;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* [추가] 이미지를 오른쪽 끝으로 배치 */
 }
 
 .hero-watch {
@@ -77,7 +79,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    /* [수정] 이미지가 오른쪽으로 더 치우치도록 설정 */
+    object-position: right center; 
     position: absolute;
     inset: 0;
     animation: fadeIn .4s ease;
@@ -85,7 +88,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:cen
 
 .hero-watch.active { display: block; }
 
-/* 배지 스타일 */
+/* 배지 스타일 유지 */
 .hbadge {
     display: inline-flex;
     align-items: center;
